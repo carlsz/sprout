@@ -16,6 +16,13 @@ updates:
         dependency-type: production
         update-types: ["minor", "patch"]
     # Majors (React, Next, etc.) stay as individual PRs for deliberate review.
+    ignore:
+      # typescript-eslint can't parse TS 7 yet — lint breaks. Revisit when supported.
+      - dependency-name: typescript
+        versions: ["7.x"]
+      # eslint-config-next's react plugin uses APIs removed in ESLint 10. Revisit when supported.
+      - dependency-name: eslint
+        versions: ["10.x"]
 
   # Keep the Actions in the CI workflow current.
   - package-ecosystem: github-actions
