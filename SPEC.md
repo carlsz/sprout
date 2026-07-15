@@ -8,7 +8,7 @@
 
 ## Objective
 
-Sprout is a fast, single-user TODO app that feels less like a productivity tool and more like a calm, friendly place to keep track of what you're growing toward. It adapts the Wise-inspired design language in [DESIGN-wise.md](DESIGN-wise.md) — heavy display sans, lime-green accent, sage canvas, generous 24px rounded cards — and rebrands it around a **plant/growth** motif ("plant a task, watch it sprout, harvest it done").
+Sprout is a fast, single-user TODO app that feels less like a productivity tool and more like a calm, friendly place to keep track of what you're growing toward. It adapts the Wise-inspired design language in [DESIGN.md](DESIGN.md) — heavy display sans, lime-green accent, sage canvas, generous 24px rounded cards — and rebrands it around a **plant/growth** motif ("plant a task, watch it sprout, harvest it done").
 
 **User:** one person managing their own tasks in their browser. No accounts, no collaboration.
 
@@ -36,7 +36,7 @@ Due dates, sorting/grouping, categories/tags/multiple lists, filtering/search, a
 ## Tech Stack
 
 - **Next.js** (latest, App Router) + **React 19** + **TypeScript** (strict).
-- **Tailwind CSS v4** (CSS-first `@theme` config; design tokens mapped from DESIGN-wise.md).
+- **Tailwind CSS v4** (CSS-first `@theme` config; design tokens mapped from DESIGN.md).
 - **Fonts:** Inter (body + sub-display) and a heavy display substitute for the "Wise Sans" role — **Manrope 800** (ExtraBold; Google Fonts' heaviest Manrope) via `next/font`. No proprietary fonts.
 - **State/persistence:** localStorage as the single source of truth, read via React's `useSyncExternalStore` (SSR-safe, cross-tab); no external state library.
 - **IDs/time:** `crypto.randomUUID()` and `Date.now()`.
@@ -74,7 +74,7 @@ lib/
   storage.ts          → localStorage read/write + useTodos hook (data abstraction seam)
 tests/                → Vitest unit/component tests (mirrors lib/ + components/)
 e2e/                  → Playwright specs
-DESIGN-wise.md        → Source design language (reference)
+DESIGN.md        → Source design language (reference)
 SPEC.md               → This spec
 ```
 
@@ -116,7 +116,7 @@ export function toggleTodo(todos: Todo[], id: string): Todo[] {
 
 ## Design Tokens (Sprout adaptation)
 
-Map DESIGN-wise.md into `app/globals.css` via Tailwind `@theme`. Reuse the token _system_ verbatim, rebranded as Sprout:
+Map DESIGN.md into `app/globals.css` via Tailwind `@theme`. Reuse the token _system_ verbatim, rebranded as Sprout:
 
 - **Accent** `--color-primary: #9fe870` (Sprout green) — reserved for the single primary CTA ("Plant task") and brand mark. Never used as a generic success color.
 - **Canvas** `--color-canvas-soft: #e8ebe6` (page), `--color-canvas: #ffffff` (cards). Surface contrast = elevation.
@@ -142,7 +142,7 @@ Map DESIGN-wise.md into `app/globals.css` via Tailwind `@theme`. Reuse the token
 ## Boundaries
 
 - **Always:** Run `npm run typecheck` + `npm test` + `npm run lint` before committing. Reference design tokens (never hardcode hex/px in components). Keep UI decoupled from storage via `useTodos`. Keep `lib/todos.ts` React-free and pure. Maintain keyboard accessibility and AA contrast.
-- **Ask first:** Adding any runtime dependency. Introducing a backend/database or auth. Expanding scope beyond the v1 acceptance criteria. Changing the data model shape. Changing brand colors/tokens away from the DESIGN-wise.md system.
+- **Ask first:** Adding any runtime dependency. Introducing a backend/database or auth. Expanding scope beyond the v1 acceptance criteria. Changing the data model shape. Changing brand colors/tokens away from the DESIGN.md system.
 - **Never:** Commit secrets. Reintroduce Wise's literal copy/trademarks (this is Sprout, inspired by, not a clone). Use Sprout green as a generic success indicator. Ship sharp-cornered CTAs (24px pill geometry is non-negotiable). Remove or skip failing tests to make a commit pass.
 
 ## Success Criteria (definition of done for v1)

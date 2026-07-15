@@ -18,7 +18,7 @@ Each layer is verifiable before the next depends on it. Tokens land early (Slice
 | Component                                                                | Depends on      | Notes                                                                |
 | ------------------------------------------------------------------------ | --------------- | -------------------------------------------------------------------- |
 | Scaffold (Next+TS+Tailwind v4, tooling, test setup)                      | —               | `create-next-app`, then wire Vitest/RTL/Playwright, ESLint, Prettier |
-| Design tokens (`app/globals.css` `@theme`) + fonts                       | Scaffold        | Maps DESIGN-wise.md; Inter + Manrope via `next/font`                 |
+| Design tokens (`app/globals.css` `@theme`) + fonts                       | Scaffold        | Maps DESIGN.md; Inter + Manrope via `next/font`                 |
 | `lib/todos.ts` (pure domain)                                             | Scaffold        | Framework-free; add/toggle/edit/remove; 100% unit-tested             |
 | `lib/storage.ts` (`useTodos` hook)                                       | `lib/todos.ts`  | localStorage round-trip; corrupt/missing → empty; SSR-safe           |
 | `components/ui/*` (Button, Card, TextInput, Checkbox)                    | Tokens          | Token-driven primitives                                              |

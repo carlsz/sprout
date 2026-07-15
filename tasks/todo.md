@@ -13,7 +13,7 @@ Ordered by dependency. Each task fits one focused session and touches ≤5 files
 ## Slice 1 — Foundation
 
 - [x] **T1. Scaffold Next.js app**
-  - Acceptance: `create-next-app` (App Router, TS strict, Tailwind v4, ESLint) initialized in repo root without clobbering `DESIGN-wise.md`/`SPEC.md`/`tasks/`; dev server renders default page.
+  - Acceptance: `create-next-app` (App Router, TS strict, Tailwind v4, ESLint) initialized in repo root without clobbering `DESIGN.md`/`SPEC.md`/`tasks/`; dev server renders default page.
   - Verify: `npm run dev` serves localhost:3000; `npm run build` clean.
   - Files: `package.json`, `tsconfig.json`, `next.config.*`, `app/layout.tsx`, `app/page.tsx`, `app/globals.css`
 
@@ -23,7 +23,7 @@ Ordered by dependency. Each task fits one focused session and touches ≤5 files
   - Files: `vitest.config.ts`, `vitest.setup.ts`, `playwright.config.ts`, `package.json`, `.prettierrc`
 
 - [x] **T3. Design tokens + fonts**
-  - Acceptance: DESIGN-wise.md tokens mapped into `app/globals.css` `@theme` (colors, radius, spacing); Inter + Manrope loaded via `next/font`; a token smoke element (sage canvas + green pill + ink display text) renders correctly.
+  - Acceptance: DESIGN.md tokens mapped into `app/globals.css` `@theme` (colors, radius, spacing); Inter + Manrope loaded via `next/font`; a token smoke element (sage canvas + green pill + ink display text) renders correctly.
   - Verify: manual dev check shows correct colors/radius/fonts; no hardcoded hex outside `globals.css`.
   - Files: `app/globals.css`, `app/layout.tsx`
 

@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 /*
- * Sprout design tokens — adapted from DESIGN-wise.md (Wise-inspired language).
+ * Sprout design tokens — adapted from DESIGN.md (Wise-inspired language).
  * Tailwind v4 CSS-first @theme: each variable generates utilities in its namespace
  * (--color-* → bg-/text-/border-, --radius-* → rounded-*, --font-* → font-*).
  */
@@ -32,7 +32,7 @@
   --color-negative-deep: #a72027;
   --color-negative-bg: #320707;
 
-  /* Radius (DESIGN-wise scale: xl 24px is canonical for buttons + cards) */
+  /* Radius (DESIGN scale: xl 24px is canonical for buttons + cards) */
   --radius-sm: 8px;
   --radius-md: 12px;
   --radius-lg: 16px;
@@ -40,7 +40,7 @@
 
   /*
    * Spacing: use Tailwind's default numeric scale (0.25rem base), which maps
-   * 1:1 to the DESIGN-wise 4px scale — do NOT add named --spacing-* tokens
+   * 1:1 to the DESIGN 4px scale — do NOT add named --spacing-* tokens
    * (xl/2xl/3xl would shadow Tailwind's built-in size keys used by max-w-*, text-*).
    *   xs 4px→1 · sm 8px→2 · md 12px→3 · lg 16px→4 · xl 24px→6 · 2xl 32px→8 · 3xl 48px→12
    */

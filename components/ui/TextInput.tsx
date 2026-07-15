@@ -5,7 +5,7 @@ type TextInputProps = InputHTMLAttributes<HTMLInputElement> & {
   ref?: Ref<HTMLInputElement>;
 };
 
-/** Canonical text input — ink hairline border, 12px radius (DESIGN-wise text-input). */
+/** Canonical text input — ink hairline border, 12px radius (DESIGN text-input). */
 export function TextInput({ className, ref, ...props }: TextInputProps) {
   return (
     <input
