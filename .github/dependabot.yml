@@ -1,0 +1,29 @@
+version: 2
+updates:
+  # npm dependencies — grouped to keep PR noise low.
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      # Non-major bumps ride together in a single PR per group.
+      dev-dependencies:
+        dependency-type: development
+        update-types: ["minor", "patch"]
+      prod-dependencies:
+        dependency-type: production
+        update-types: ["minor", "patch"]
+    # Majors (React, Next, etc.) stay as individual PRs for deliberate review.
+
+  # Keep the Actions in the CI workflow current.
+  - package-ecosystem: github-actions
+    directory: "/"
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    groups:
+      github-actions:
+        patterns: ["*"]
