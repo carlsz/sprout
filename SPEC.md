@@ -204,7 +204,7 @@ A **Garden card** at the top of the page (below the wordmark, above the task lis
 - [x] Completing a task increments today's count; the plant advances a stage when a threshold is crossed. Persists across reload.
 - [x] Un-completing a task decrements today's count and regresses the plant; midnight-correct (decrements the day it was completed).
 - [x] Deleting an already-completed task does **not** reduce today's count.
-- [x] Reaching 5 harvests shows full bloom 🌷; below 5 shows the "N to bloom" hint.
+- [x] Reaching 5 harvests shows full bloom 🌳; below 5 shows the "N to bloom" hint.
 - [x] Garden card renders at 🌰 seed on a fresh day with no harvests.
 - [x] Stage + log logic covered by unit tests with an injected `now` (including a complete-on-day-A, un-complete-on-day-B case).
 
@@ -218,3 +218,13 @@ A **Garden card** at the top of the page (below the wordmark, above the task lis
 1. **Bloom at 5 harvests/day.** Resolved.
 2. **Stage emojis 🌰→🌱→🌿→🪴→🌳** (tree as the permanent-growth bloom). Resolved.
 3. **Garden card placement** above the Seed input. Resolved.
+
+## Critical User Journeys
+
+<!-- BEGIN ux-agent-skills:cuj-index — generated from .ux/cujs/; edit the CUJ files, not this table -->
+| ID | Journey | Actor | Criticality | Goal | File |
+|---|---|---|---|---|---|
+| CUJ-001 | Add a task | Casual gamer evaluating Sprout for the first time, with no tasks saved yet | critical | Seed a first task from the empty state without navigating away | [.ux/cujs/CUJ-001-add-a-task.md](.ux/cujs/CUJ-001-add-a-task.md) |
+| CUJ-002 | Complete a task | The same casual gamer, now holding the single task they seeded — Sprout is a single-user app | high | Harvest a task and see it credited to today's plant | [.ux/cujs/CUJ-002-complete-a-task.md](.ux/cujs/CUJ-002-complete-a-task.md) |
+| CUJ-003 | Reach full bloom | The same casual gamer, working through a day's list of five tasks, chasing the garden's full-bloom reward | medium | Grow today's plant to full bloom by harvesting five tasks in a single day | [.ux/cujs/CUJ-003-reach-full-bloom.md](.ux/cujs/CUJ-003-reach-full-bloom.md) |
+<!-- END ux-agent-skills:cuj-index -->
