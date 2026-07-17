@@ -4,6 +4,8 @@ Sprout is a fast, single-user TODO app that feels less like a productivity tool 
 
 Built with Next.js (App Router) and Tailwind CSS v4, wearing a distinctive lime-green-on-sage design system. No accounts, no backend — your todos live in your browser.
 
+![Screenshot of Sprout: a task list with a garden progress card showing "4 harvested today, 1 more to bloom" and completed tasks](public/sprout.png)
+
 ## Features
 
 - **Seed, complete, edit, and delete todos** — inline editing, a two-step delete confirm, and a live count of what's still growing.
