@@ -218,3 +218,12 @@ A **Garden card** at the top of the page (below the wordmark, above the task lis
 1. **Bloom at 5 harvests/day.** Resolved.
 2. **Stage emojis 🌰→🌱→🌿→🪴→🌳** (tree as the permanent-growth bloom). Resolved.
 3. **Garden card placement** above the Seed input. Resolved.
+
+## Critical User Journeys
+
+<!-- BEGIN ux-agent-skills:cuj-index — generated from .ux/cujs/; edit the CUJ files, not this table -->
+| ID | Journey | Actor | Criticality | Goal | File |
+|---|---|---|---|---|---|
+| CUJ-001 | Add a task | Casual gamer evaluating Sprout for the first time, with no tasks saved yet | critical | Seed a first task from the empty state without navigating away | [.ux/cujs/CUJ-001-add-a-task.md](.ux/cujs/CUJ-001-add-a-task.md) |
+| CUJ-002 | Complete a task | The same casual gamer, now holding the single task they seeded — Sprout is a single-user app | high | Harvest a task and see it credited to today's plant | [.ux/cujs/CUJ-002-complete-a-task.md](.ux/cujs/CUJ-002-complete-a-task.md) |
+<!-- END ux-agent-skills:cuj-index -->
